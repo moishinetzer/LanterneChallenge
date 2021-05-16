@@ -1,2 +1,1 @@
 # LanterneChallenge
-Created with CodeSandbox
