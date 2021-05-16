@@ -49,7 +49,7 @@ export default function App() {
         <br />
         The table showing all the data is shown below.
       </p>
-      <div className="h-full pt-10">
+      <div className="h-full py-16">
         <DataGrid
           rows={rows}
           columns={columns}
