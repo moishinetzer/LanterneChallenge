@@ -1,5 +1,6 @@
 import "./styles.css";
 import { DataGrid, GridToolbar } from "@material-ui/data-grid";
+import data from "./data.json";
 import rows from "./data";
 
 export default function App() {
