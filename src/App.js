@@ -1,9 +1,9 @@
 import "./styles.css";
 import { DataGrid, GridToolbar } from "@material-ui/data-grid";
-import rows from "./data";
+import data from "./data.json";
 
 export default function App() {
-  // console.log(rows);
+  console.log(data);
 
   const columns = [
     { field: "FID", headerName: "FID", width: 80 },
@@ -34,12 +34,6 @@ export default function App() {
         based on the time constraints
         <br />
         <br />
-        (The edited data itself has not been used on this webpage as I was
-        having a very hard time converting the CSV to JSON, which would not be a
-        problem if I would have the time to properly look into integrating SQL
-        with the data and frontend with node)
-        <br />
-        <br />
         After getting the formatted files now I can use material ui to create a
         table to browse all the data and apply any filters on the data with
         auto-pagination enabled. If I would have enough time I would have made
@@ -51,7 +45,7 @@ export default function App() {
       </p>
       <div className="h-full py-16">
         <DataGrid
-          rows={rows}
+          rows={data}
           columns={columns}
           getRowId={(row) => row["FID"]}
           components={{
