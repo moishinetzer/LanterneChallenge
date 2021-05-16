@@ -49,7 +49,7 @@ for row in filtered_csv:
     writer.writerow(row)
     print(row)
 
-# Save results as a JSON file to use for now
+# Save results as a JSON file to use for now ignore the first row of filtered_csv as that is reserved for the headers
 print(headers)
 final_list = [{"FID": x[0], "OBJECTID": x[1], "NAME": x[2], "EASTING": x[3], "NORTHING": x[4], "LINES": x[5],
                "NETWORK": x[6], "Zone": x[7], "x": x[8], "y": x[9]} for x in filtered_csv[1:]]
