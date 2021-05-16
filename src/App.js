@@ -1,5 +1,5 @@
 import "./styles.css";
-import { DataGrid } from "@material-ui/data-grid";
+import { DataGrid, GridToolbar } from "@material-ui/data-grid";
 import rows from "./data";
 
 export default function App() {
@@ -54,6 +54,9 @@ export default function App() {
           rows={rows}
           columns={columns}
           getRowId={(row) => row["FID"]}
+          components={{
+            Toolbar: GridToolbar
+          }}
         />
       </div>
     </div>
