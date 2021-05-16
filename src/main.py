@@ -1,4 +1,5 @@
 import csv
+import json
 
 # Array of the final edited data with the first item being the headers
 filtered_csv = [["FID", "OBJECTID", "NAME", "EASTING", "NORTHING", "LINES", "NETWORK", "Zone", "x", "y"]]
@@ -18,8 +19,7 @@ with open('data.csv') as data:
         edited_row = []
         corrected_lines = []
 
-        # For each line in the lines field, check if it is allowed and append it 
-        # to an array as that is the shape of an JSON object
+        # For each line in the lines field, check if it is allowed
         for line in row[5].split(", "):
             if line in allowed_lines:
                 corrected_lines.append(line)
@@ -47,3 +47,12 @@ print(filtered_csv)
 writer = csv.writer(open("editedData.csv", 'w', newline=''))
 for row in filtered_csv:
     writer.writerow(row)
+    print(row)
+
+# Save results as a JSON file to use for now
+print(headers)
+final_list = [{"FID": x[0], "OBJECTID": x[1], "NAME": x[2], "EASTING": x[3], "NORTHING": x[4], "LINES": x[5],
+               "NETWORK": x[6], "Zone": x[7], "x": x[8], "y": x[9]} for x in filtered_csv]
+
+with open('data.json', 'w') as json_file:
+    json.dump(final_list, json_file)
