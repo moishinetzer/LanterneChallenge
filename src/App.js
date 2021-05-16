@@ -6,16 +6,16 @@ export default function App() {
   // console.log(rows);
 
   const columns = [
-    { field: "FID", headerName: "FID" },
-    { field: "OBJECTID", headerName: "OBJECTID" },
-    { field: "NAME", headerName: "NAME" },
-    { field: "EASTING", headerName: "EASTING" },
-    { field: "NORTHING", headerName: "NORTHING" },
-    { field: "LINES", headerName: "LINES" },
-    { field: "NETWORK", headerName: "NETWORK" },
-    { field: "Zone", headerName: "Zone" },
-    { field: "x", headerName: "x" },
-    { field: "y", headerName: "y" }
+    { field: "FID", headerName: "FID", width: 80 },
+    { field: "OBJECTID", headerName: "OBJECTID", width: 130 },
+    { field: "NAME", headerName: "NAME", width: 200 },
+    { field: "EASTING", headerName: "EASTING", width: 120 },
+    { field: "NORTHING", headerName: "NORTHING", width: 130 },
+    { field: "LINES", headerName: "LINES", width: 200 },
+    { field: "NETWORK", headerName: "NETWORK", width: 200 },
+    { field: "Zone", headerName: "Zone", width: 100 },
+    { field: "x", headerName: "x", width: 130 },
+    { field: "y", headerName: "y", width: 130 }
   ];
 
   return (
