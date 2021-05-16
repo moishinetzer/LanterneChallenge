@@ -33,8 +33,9 @@ with open('data.csv') as data:
             edited_row.append(int(row[4]))
             edited_row.append(corrected_lines)
             edited_row.append(row[6])
-            edited_row.append(float(row[7]))
-            edited_row.append(float(row[4]))
+            edited_row.append(int(row[7]))
+            edited_row.append(float(row[8]))
+            edited_row.append(float(row[9]))
 
             # Now append that to the final array of data
             filtered_csv.append(edited_row)
